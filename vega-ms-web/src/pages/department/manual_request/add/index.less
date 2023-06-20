@@ -1,0 +1,34 @@
+// @import '~antd/es/style/themes/default.less';
+
+:global(.ant-steps-item-finish
+		> .ant-steps-item-container
+		> .ant-steps-item-content
+		> .ant-steps-item-title) {
+	color: @primary-color !important;
+}
+
+.drop {
+	left: 20% !important;
+	width: 70% !important;
+
+	:global {
+		.ant-select-dropdown {
+			left: 258px !important;
+			width: 1644px !important;
+		}
+	}
+}
+
+:global {
+	.ant-table-cell.ant-table-cell-row-hover {
+		background-color: @bgc_checked !important;
+	}
+}
+
+.editable-row:hover .editable-cell-value-wrap {
+	border: 1px solid @bd_C4C4C4;
+}
+
+.selected {
+	background-color: @bgc_title;
+}

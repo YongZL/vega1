@@ -1,0 +1,43 @@
+.receiptList {
+	display: flex;
+
+	.fileItem {
+		display: inline-block;
+		width: 300px;
+		margin: 0 14px 10px 0;
+		padding: 4px 14px;
+		overflow: hidden;
+		border: 1px solid @bd_D9D9D9;
+		border-radius: 6px;
+
+		i {
+			float: right;
+			line-height: 22px;
+		}
+
+		i:hover {
+			color: @primary-color;
+			cursor: pointer;
+		}
+	}
+
+	.deleteIcon {
+		color: @c_disabled;
+		line-height: 36px;
+		cursor: pointer;
+	}
+}
+
+.upload {
+	button {
+		color: @primary-color;
+		border-color: @primary-color;
+	}
+}
+
+.submitBtn {
+	display: block;
+	width: 120px;
+	height: 32px;
+	margin: 0 auto;
+}

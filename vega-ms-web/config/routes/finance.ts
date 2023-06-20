@@ -1,0 +1,291 @@
+export default {
+	// name: 'finance',
+	icon: 'icon-Calculator',
+	path: '/finance',
+	routes: [
+		{
+			exact: true,
+			path: '/finance',
+			redirect: '/finance/fresh_generate_settlement',
+		},
+		// 科室领用汇总路由配置
+		// {
+		//   // name: 'settlement',
+		//   icon: null,
+		//   path: '/finance/settlement',
+		//   access: 'statement_list',
+		//   routes: [
+		//     {
+		//       exact: true,
+		//       // name: 'settlement_list',
+		//       path: '/finance/settlement',
+		//       access: 'statement_list',
+		//       component: './finance/settlement',
+		//     },
+		//     {
+		//       exact: true,
+		//       // name: 'settlement_list',
+		//       path: '/finance/settlement/:id/:readOnly',
+		//       access: 'statement_list',
+		//       component: './finance/settlement',
+		//     },
+		//     { component: '404' },
+		//   ],
+		// },
+		{
+			// name: 'fresh_generate_settlement',
+			icon: null,
+			path: '/finance/fresh_generate_settlement',
+			access: 'fresh_generate_settlement',
+			routes: [
+				{
+					exact: true,
+					// name: 'fresh_generate_settlement_list',
+					path: '/finance/fresh_generate_settlement',
+					access: 'fresh_generate_settlement',
+					component: './finance/freshGenerateSettlement',
+				},
+				{
+					exact: true,
+					// name: 'fresh_generate_settlement_detail',
+					path: '/finance/fresh_generate_settlement/detail',
+					access: 'generate_settlement_fin',
+					component: './finance/freshGenerateSettlement/detail',
+				},
+				{ component: '404' },
+			],
+		},
+		{
+			// name: 'historySettlementList',
+			icon: null,
+			path: '/finance/historySettlementList',
+			access: 'historySettlementList',
+			routes: [
+				{
+					exact: true,
+					// name: 'historySettlementList_list',
+					path: '/finance/historySettlementList',
+					access: 'historySettlementList',
+					component: './finance/historySettlementList',
+				},
+				{ component: '404' },
+			],
+		},
+		{
+			// name: 'fresh_material_receiptList',
+			icon: null,
+			path: '/finance/fresh_material_receipt',
+			routes: [
+				{
+					exact: true,
+					// name: 'fresh_material_receiptList',
+					path: '/finance/fresh_material_receipt',
+					access: 'fresh_material_receipt',
+					component: './finance/freshMaterialReceipt/list',
+				},
+				{ component: '404' },
+			],
+		},
+		{
+			icon: null,
+			path: '/finance/invoice_audit_query',
+			routes: [
+				{
+					exact: true,
+					path: '/finance/invoice_audit_query',
+					access: 'invoiceAuditQuery',
+					component: './finance/invoiceAudit/list/query',
+				},
+				{ component: '404' },
+			],
+		},
+		{
+			icon: null,
+			path: '/finance/invoice_audit_handle',
+			routes: [
+				{
+					exact: true,
+					path: '/finance/invoice_audit_handle',
+					access: 'invoiceAuditHandle',
+					component: './finance/invoiceAudit/list/handle',
+				},
+				{ component: '404' },
+			],
+		},
+		// {
+		//   // name: 'InvoiceSync',
+		//   icon: null,
+		//   path: '/finance/InvoiceSyncInventory',
+		//   component: './finance/InvoiceSyncInventory',
+		//   access: 'InvoiceSync',
+		// },
+		// {
+		//   // name: 'InvoiceSync',
+		//   icon: null,
+		//   path: '/finance/InvoiceSyncInventory',
+		//   access: 'InvoiceSync',
+		//   routes: [
+		//     {
+		//       exact: true,
+		//       // name: 'InvoiceSync',
+		//       path: '/finance/InvoiceSyncInventory',
+		//       access: 'InvoiceSync',
+		//       component: './finance/InvoiceSyncInventory',
+		//     },
+		//     { component: '404' },
+		//   ],
+		// },
+		{
+			// name: 'materialReceiptCreate',
+			icon: null,
+			path: '/finance/materialReceiptCreate',
+			access: 'materialReceiptCreate',
+			routes: [
+				{
+					exact: true,
+					// name: 'materialReceiptCreate',
+					path: '/finance/materialReceiptCreate',
+					access: 'materialReceiptCreate',
+					component: './finance/materialReceiptCreate',
+				},
+				{ component: '404' },
+			],
+		},
+		{
+			// name: 'materialReceiptCreate',
+			icon: null,
+			path: '/finance/InvoiceProcessing',
+			access: 'InvoiceProcessing',
+			routes: [
+				{
+					exact: true,
+					// name: 'materialReceiptCreate',
+					path: '/finance/InvoiceProcessing',
+					access: 'InvoiceProcessing',
+					component: './finance/InvoiceProcessing/list',
+				},
+				{ component: '404' },
+			],
+		},
+		// {
+		//   // name: 'invoicing',
+		//   icon: null,
+		//   path: '/finance/invoicing',
+		//   access: 'finance_invoicing',
+		//   routes: [
+		//     {
+		//       exact: true,
+		//       // name: 'invoicing_list',
+		//       path: '/finance/invoicing',
+		//       access: 'finance_invoicing',
+		//       component: './finance/invoicing',
+		//     },
+		//     { component: '404' },
+		//   ],
+		// },
+		// {
+		//   // name: 'invoice_list',
+		//   icon: null,
+		//   path: '/finance/invoice_list',
+		//   access: 'finance_invoice_list',
+		//   routes: [
+		//     {
+		//       exact: true,
+		//       // name: 'invoice_list',
+		//       path: '/finance/invoice_list',
+		//       access: 'finance_invoice_list',
+		//       component: './finance/invoice_list',
+		//     },
+		//     { component: '404' },
+		//   ],
+		// },
+		// {
+		//   // name: 'make_invoice_list',
+		//   icon: null,
+		//   path: '/finance/make_invoice_list',
+		//   access: 'finance_make_invoice_list',
+		//   routes: [
+		//     {
+		//       exact: true,
+		//       // name: 'make_invoice_list',
+		//       path: '/finance/make_invoice_list',
+		//       access: 'finance_make_invoice_list',
+		//       component: './finance/make_invoice_list',
+		//     },
+		//     {
+		//       exact: true,
+		//       // name: 'invoice_modify',
+		//       path: '/finance/make_invoice_list/invoice_modify',
+		//       access: 'finance_invoice_modify',
+		//       component: './finance/make_invoice_list/invoice_modify',
+		//     },
+		//     { component: '404' },
+		//   ],
+		// },
+		// {
+		//   // name: 'doctor_advice',
+		//   icon: null,
+		//   path: '/finance/doctor_advice',
+		//   access: 'doctor_advice_list',
+		//   routes: [
+		//     {
+		//       exact: true,
+		//       // name: 'doctor_advice_list',
+		//       path: '/finance/doctor_advice',
+		//       access: 'doctor_advice_list',
+		//       component: './finance/doctor_advice',
+		//     },
+		//     { component: '404' },
+		//   ],
+		// },
+		// {
+		//   // name: 'cost_central',
+		//   icon: null,
+		//   path: '/finance/cost_central',
+		//   access: 'cost_central_list',
+		//   routes: [
+		//     {
+		//       exact: true,
+		//       // name: 'cost_central_list',
+		//       path: '/finance/cost_central',
+		//       access: 'cost_central_list',
+		//       component: './finance/cost_central',
+		//     },
+		//     { component: '404' },
+		//   ],
+		// },
+		// {
+		//   // name: 'procurementUse',
+		//   icon: null,
+		//   path: '/finance/procurementUse',
+		//   access: 'procurementUse',
+		//   routes: [
+		//     {
+		//       exact: true,
+		//       // name: 'procurementUse',
+		//       path: '/finance/procurementUse',
+		//       access: 'procurementUse',
+		//       component: './finance/procurementUse',
+		//     },
+		//     { component: '404' },
+		//   ],
+		// },
+		// {
+		//   // name: 'procurementUseTwo',
+		//   icon: null,
+		//   path: '/finance/procurementUseTwo',
+		//   access: 'procurementUseTwo',
+		//   routes: [
+		//     {
+		//       exact: true,
+		//       // name: 'procurementUseTwo',
+		//       path: '/finance/procurementUseTwo',
+		//       access: 'procurementUseTwo',
+		//       component: './finance/procurementUseTwo',
+		//     },
+		//     { component: '404' },
+		//   ],
+		// },
+		{ component: '404' },
+	],
+};

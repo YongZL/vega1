@@ -1,0 +1,13 @@
+:global {
+	@media print {
+		@page {
+			margin: 5mm 8mm;
+			size: A4 portrait;
+			orphans: 0;
+			widows: 2;
+			@bottom-right {
+				content: counter(page) '/' counter(pages);
+			}
+		}
+	}
+}

@@ -1,0 +1,57 @@
+.reportForm {
+	font-size: @font-size-base;
+
+	:global {
+		.page-bread-crumb > div {
+			padding: 8px 16px;
+		}
+
+		.ant-breadcrumb > span:last-child {
+			font-size: @font-size-20;
+		}
+
+		.pointer {
+			cursor: pointer;
+		}
+
+		.searchWrap {
+			position: relative;
+			padding: 8px 199px 32px 8px;
+			background: @bgc_search !important;
+
+			.ant-form-item {
+				display: flex;
+				margin-bottom: 8px;
+			}
+
+			.ant-form-item-label {
+				white-space: pre-wrap;
+			}
+
+			.ant-form-item-control {
+				flex: 1 !important;
+			}
+
+			.labelEle {
+				float: left;
+				height: 20px;
+				text-align: justify;
+				text-justify: inter-word;
+				text-justify: inter-ideograph;
+			}
+
+			.labelEle span {
+				display: inline-block;
+				width: 100%;
+				background: @c_starus_warning;
+			}
+
+			.searchBtn {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				padding-bottom: 8px;
+			}
+		}
+	}
+}

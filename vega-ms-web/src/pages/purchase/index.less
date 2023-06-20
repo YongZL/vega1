@@ -1,0 +1,90 @@
+.explain {
+	color: @c_starus_warning;
+}
+
+.lotNum {
+	:global {
+		.site-input-split {
+			width: 30px;
+			background-color: @bgc_table;
+			border-right: 0;
+			border-left: 0;
+			pointer-events: none;
+		}
+
+		.site-input-right {
+			border-left-width: 0;
+		}
+
+		.site-input-left,
+		.site-input-right {
+			width: 100px;
+		}
+
+		.site-input-left:hover,
+		.site-input-left:focus,
+		.ant-input-status-error {
+			margin-right: 1px;
+		}
+
+		.ant-form-item {
+			margin: 0;
+		}
+
+		// .site-input-right:hover,
+		.site-input-right:focus {
+			border-left-width: 1px;
+		}
+
+		.ant-input-rtl.site-input-right {
+			border-right-width: 0;
+		}
+
+		.ant-input-rtl.site-input-right:hover,
+		.ant-input-rtl.site-input-right:focus {
+			border-right-width: 1px;
+		}
+	}
+}
+
+@keyframes bgChange {
+	from {
+		background: @bgc_table;
+	}
+
+	to {
+		background: @bgc_checked;
+	}
+}
+
+.repeatUdi {
+	animation: bgChange 500ms;
+	animation-iteration-count: 3;
+
+	:global {
+		.udiCode .ant-input-affix-wrapper {
+			border: 1px solid @c_starus_await !important;
+		}
+	}
+}
+
+.repeatLotNum {
+	animation: bgChange 500ms;
+	animation-iteration-count: 3;
+
+	:global {
+		.quantityInMin .ant-input-affix-wrapper {
+			border: 1px solid @c_starus_await !important;
+		}
+	}
+}
+.radioGroup {
+	display: flex;
+	width: 77%;
+	:global {
+		.ant-radio-button-wrapper {
+			flex: 1;
+			text-align: center;
+		}
+	}
+}

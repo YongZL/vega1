@@ -1,0 +1,234 @@
+// :global(.printContent) {
+//   display: none;
+// }
+// 打印的时候生效
+// @media print and (orientation: landscape) {
+//   // 默认横向的参考 https://stackoverflow.com/questions/138422/landscape-printing-from-html
+//   @page {
+//     size: A4 landscape;
+//     margin: 1cm 1cm 2cm 1cm;
+//     orphans: 4;
+//     widows: 2;
+
+//     @bottom-right {
+//       content: counter(page) "/" counter(pages);
+//     }
+//   }
+
+//   body {
+//     width: 100%;
+//     margin: 0;
+//     float: none;
+//     : "serif","sans-serif","cursive","fantasy","monospace","arial", "Times New Roman", "Georgia", "Times";
+//     line-height: 1.2;
+//     background: #fff !important;
+//     color: #000;
+//   }
+
+//   tr,
+//   td {
+//     font-size: 12px !important;
+//     color: #000;
+//   }
+//   tr {
+//     color: #7f7f7f;
+//   }
+
+//   /* 表格防截断 */
+//   tr,
+//   td {
+//     page-break-after: avoid;
+//     page-break-inside: avoid;
+//   }
+
+//   .printContent {
+//     display: block;
+//   }
+
+//   .print-page {
+//     font-size: 14px!important;
+//     color: #7f7f7f;
+//     // width: 100%;
+//     min-height: 100vh;
+//     display: flex;
+//     flex-direction: column;
+//     span{
+//       color: #000;
+//     }
+//     .titleInfo{
+//       display: flex;
+//       justify-content: space-between;
+//       margin-left: 15px;
+//       .title{
+//         display: block;
+//         font-size: @font-size-24;
+//         line-height: 50px;
+//       }
+//     }
+//     .otherInfo{
+//       margin: 15px 0;
+//     }
+//   }
+// }
+
+@media print {
+	@page {
+		margin: 5mm 8mm 0mm 8mm;
+		// size: 35cm 20cm;
+		size: A4 landscape;
+		orphans: 0;
+		widows: 2;
+		@bottom-right {
+			content: counter(page) '/' counter(pages);
+		}
+	}
+
+	h1 {
+		page-break-before: always;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	thead,
+	tfoot,
+	tr,
+	th,
+	td,
+	li {
+		page-break-inside: avoid;
+	}
+
+	table {
+		page-break-after: avoid;
+	}
+
+	body {
+		color: @c_body;
+		background-color: @bgc_table;
+	}
+
+	nav,
+	aside {
+		display: none;
+	}
+
+	// a::after {
+	//   content: '(' attr(href) ')';
+	// }
+
+	thead,
+	tfoot {
+		display: table-row-group;
+	}
+}
+
+.print-page {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	color: @c_hint;
+	font-size: @font-size-20;
+	span {
+		color: @c_body;
+	}
+	.listTitle {
+		display: flex;
+		margin-bottom: 30px;
+		// border-bottom: 0px;
+	}
+	.titleInfo {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: end;
+		padding: 0;
+		font-weight: 500;
+		.title {
+			font-size: @font-size-24;
+		}
+		.code {
+			margin-top: 12px;
+			font-size: @font-size-20;
+		}
+	}
+	.qrcode {
+		padding: 9px 0;
+	}
+
+	.otherInfo {
+		margin: 15px 0;
+	}
+	tr,
+	td {
+		color: @c_body;
+		font-size: @font-size-16 !important;
+	}
+	tr {
+		color: @c_hint;
+	}
+	.footer {
+		display: flex;
+		width: 100%;
+		margin-top: 20px;
+		.autograpWrap {
+			flex: 1;
+		}
+	}
+}
+.simple_print-page {
+	display: flex;
+}
+.table {
+	width: 100vw;
+	table-layout: fixed;
+	border-collapse: 'collapse';
+	// border: 0px solid #000 !important;
+	border-spacing: 0;
+	// font-size: @font-size-20;
+
+	// margin-top: 1vh;
+	td {
+		// border-bottom: 0px solid black;
+		padding: 5px;
+		word-break: break-all;
+		border: 1px solid @bd_C4C4C4;
+	}
+	.noBorder > td {
+		border: 0px !important;
+	}
+	.thead {
+		td {
+			font-weight: 500;
+		}
+	}
+	.thead-center {
+		text-align: center;
+	}
+	.thead-right {
+		text-align: right;
+	}
+	.content {
+		height: 55px;
+	}
+	.content > td {
+		text-align: center;
+		word-wrap: break-word;
+	}
+	.content-right > td {
+		text-align: right;
+		word-wrap: break-word;
+	}
+	.huanhang > p {
+		display: -webkit-box;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+	}
+}

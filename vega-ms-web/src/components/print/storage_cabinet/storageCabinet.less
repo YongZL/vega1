@@ -1,0 +1,88 @@
+.storageCabinet {
+	width: 140mm;
+	height: 100mm;
+	margin: 0 auto;
+
+	.content {
+		width: 140mm;
+		height: 100mm;
+		margin: 0 auto;
+		padding: 6mm 0;
+		border: 2px solid @bd_B0B2BC;
+		.content-top {
+			display: flex;
+			padding: 0 5mm;
+			border-bottom: 2px solid @bd_B0B2BC;
+
+			.left {
+				width: 95mm;
+
+				> div:nth-child(1) {
+					margin-bottom: 2mm;
+					font-weight: 500;
+					font-size: @font-size-24;
+					line-height: 1;
+				}
+
+				> div:nth-child(2) {
+					margin-bottom: 4mm;
+					overflow: hidden;
+					font-weight: 500;
+					font-size: 41px;
+					line-height: 1.4;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+			}
+
+			.right {
+				display: flex;
+				margin-top: 2mm;
+
+				span {
+					display: inline-block;
+					width: 14mm;
+					height: 14mm;
+					color: @c_hint;
+					font-weight: 400;
+					font-size: @font-size-32;
+					text-align: center;
+					border: 1px solid @bd_C4C4C4;
+					border-radius: 50%;
+				}
+
+				span:nth-child(1) {
+					margin-right: 30px;
+				}
+
+				.high-value,
+				.low-value {
+					color: #fff;
+					background-color: @c_body;
+					-webkit-print-color-adjust: exact;
+				}
+			}
+		}
+
+		.content-bottom {
+			display: flex;
+			padding: 6mm 5mm 0 5mm;
+
+			.left {
+				width: 75mm;
+
+				p {
+					margin-bottom: 6mm;
+					overflow: hidden;
+					font-size: @font-size-20;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+
+				.hospital-name {
+					margin-top: 12mm;
+				}
+			}
+		}
+	}
+}

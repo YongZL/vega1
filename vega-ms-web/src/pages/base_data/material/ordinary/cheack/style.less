@@ -1,0 +1,74 @@
+// @import '~antd/es/style/themes/default.less';
+
+.main {
+	:global {
+		.ant-descriptions-row > td {
+			padding-bottom: 8px;
+		}
+		.ant-page-header-heading-extra {
+			flex-direction: column;
+		}
+	}
+}
+
+.headerList {
+	margin-bottom: 4px;
+	:global {
+		.ant-descriptions-row > td {
+			padding-bottom: 8px;
+		}
+	}
+
+	.stepDescription {
+		position: relative;
+		left: 38px;
+		padding-top: 8px;
+		font-size: @font-size-base;
+		text-align: left;
+
+		> div {
+			margin-top: 8px;
+			margin-bottom: 4px;
+		}
+	}
+}
+
+.pageHeader {
+	:global {
+		.ant-page-header-heading-extra > * + * {
+			margin-left: 8px;
+		}
+	}
+	.moreInfo {
+		display: flex;
+		justify-content: space-between;
+		width: 240px;
+	}
+}
+.detailWrap {
+	display: flex;
+	width: 100%;
+	.left {
+		flex: auto;
+	}
+	.right {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		min-width: 350px;
+		margin-left: 0px;
+		text-align: right;
+	}
+}
+@media screen and (max-width: @screen-sm) {
+	.stepDescription {
+		left: 8px;
+	}
+	.pageHeader {
+		:global {
+			.ant-pro-page-header-wrap-row {
+				flex-direction: column;
+			}
+		}
+	}
+}

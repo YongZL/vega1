@@ -1,0 +1,72 @@
+.headerList {
+	margin-bottom: 4px;
+
+	:global {
+		.ant-descriptions-row > td {
+			padding-bottom: 8px;
+		}
+	}
+
+	.stepDescription {
+		position: relative;
+		left: 38px;
+		padding-top: 8px;
+		font-size: @font-size-base;
+		text-align: left;
+
+		> div {
+			margin-top: 8px;
+			margin-bottom: 4px;
+		}
+	}
+}
+
+.pageHeader {
+	:global {
+		.ant-page-header-heading-extra > * + * {
+			margin-left: 8px;
+		}
+	}
+
+	.moreInfo {
+		display: flex;
+		justify-content: space-between;
+		width: 200px;
+	}
+}
+
+.detailWrap {
+	display: flex;
+	width: 100%;
+
+	.left {
+		flex: auto;
+	}
+
+	.right {
+		min-width: 150px;
+		margin-left: 44px;
+		text-align: right;
+	}
+
+	.descriptionsRow {
+		display: flex;
+
+		.collItem {
+			display: flex;
+			flex: 1;
+
+			.label {
+				color: @c_body;
+				font-weight: normal;
+				font-size: @font-size-base;
+				line-height: 1.5715;
+			}
+
+			.content {
+				color: @c_body;
+				font-size: @font-size-base;
+			}
+		}
+	}
+}

@@ -1,0 +1,39 @@
+.copy {
+	position: absolute;
+	top: 42px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	width: 82px;
+	height: 32px;
+	margin-left: -6.3%;
+	border: 1px solid @c_starus_await;
+	border-radius: 2px;
+}
+
+.detailWrap {
+	:global(span) {
+		display: block;
+	}
+
+	// .link {
+	//   display: inline-block;
+	//   font-size: @font-size-12;
+	//   color: @primary-color;
+	//   cursor: pointer;
+	//   padding-left: 6px;
+	// }
+
+	.default {
+		color: @c_hint;
+	}
+}
+
+.relevanceTable {
+	:global {
+		.ant-pro-card-body {
+			padding: 0 0 24px;
+		}
+	}
+}

@@ -1,0 +1,80 @@
+.topTitle {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 25vh;
+	margin-left: -19%;
+}
+
+.title {
+	margin-right: -26%;
+}
+
+.textTitle {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 23vh;
+}
+
+.date {
+	width: 100%;
+}
+
+.num {
+	width: 15%;
+}
+.operation {
+	.handleLink {
+		color: @primary-color !important;
+	}
+}
+.hiden {
+	visibility: hidden;
+}
+
+.ordinary {
+	.rowActived {
+		background: @bgc_title;
+	}
+
+	:global(.ant-table-body) {
+		height: 183px;
+	}
+}
+
+.approval-result-title {
+	height: 22px;
+	margin-bottom: 8px;
+	font-size: @font-size-16;
+	line-height: 22px;
+}
+
+.approvalResult {
+	:global {
+		.ant-form label {
+			margin-top: 8px;
+		}
+
+		.auditType {
+			margin-bottom: 4px;
+		}
+
+		textarea {
+			margin-left: 24px;
+		}
+
+		.ant-form-item-control-input-content > .ant-pro-field-radio-horizontal {
+			flex-direction: column;
+
+			.auditType {
+				font-size: @font-size-12;
+
+				span {
+					font-weight: 500;
+					font-size: @font-size-base;
+				}
+			}
+		}
+	}
+}

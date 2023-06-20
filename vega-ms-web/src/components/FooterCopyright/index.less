@@ -1,0 +1,40 @@
+// @import '~antd/es/style/themes/default.less';
+
+:global(.pageFooter),
+:global(.login) {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	padding: 10px 0 14px 0;
+	color: @c_hint;
+	text-align: center;
+	:global(.copyright) {
+		font-size: @font-size-12;
+		img {
+			display: inline-block;
+			margin: -4px 6px 0 0;
+		}
+	}
+	:global(.links),
+	span {
+		display: inline-block;
+		padding-right: 10px;
+	}
+	:global(.links) {
+		color: @c_hint;
+		&:hover {
+			color: @primary-color;
+			cursor: pointer;
+		}
+	}
+	:global(.otherLink:hover) {
+		color: @primary-color;
+		cursor: pointer;
+	}
+}
+:global(.login) {
+	color: #fff;
+	:global(.links) {
+		color: #fff;
+	}
+}

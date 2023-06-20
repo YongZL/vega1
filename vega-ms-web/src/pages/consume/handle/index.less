@@ -1,0 +1,85 @@
+:global {
+	.consume-handle-table {
+		.ant-table-row[same-element] {
+			.ant-checkbox-checked:hover,
+			.ant-checkbox-inner,
+			.ant-checkbox-inner:hover {
+				background: @bgc_table !important;
+				border-color: @c_starus_warning !important;
+			}
+
+			.ant-checkbox-checked .ant-checkbox-inner::after {
+				border-color: @c_starus_warning;
+			}
+		}
+
+		td.ant-table-column-sort {
+			background: @bgc_table;
+		}
+
+		.ant-table-row[data-selected] .ant-table-column-sort {
+			background: @bgc_title !important;
+		}
+
+		.ant-table-row:not([data-selected]) {
+			&,
+			> td {
+				background-color: @bgc_table;
+			}
+		}
+
+		.ant-table-row:hover,
+		.ant-table-row:active,
+		.ant-table-cell-row-hover {
+			&,
+			> td {
+				background-color: @bgc_table !important;
+			}
+		}
+
+		.scanCapacity .label span {
+			color: @c_starus_warning !important;
+		}
+
+		&.consume-handle-table__active .ant-table-row[same-element] td {
+			&,
+			span {
+				color: @c_starus_warning !important;
+			}
+		}
+
+		.ant-table-row:last-child .ant-checkbox-wrapper {
+			display: none;
+		}
+	}
+
+	.consume-operator-tip {
+		color: @c_starus_warning;
+	}
+
+	.consume-handle-table .ant-table .ant-table-body .table-even-row:not([data-selected]) {
+		.ant-table-cell-fix-left,
+		.ant-table-cell-fix-right,
+		td.ant-table-column-sort {
+			background-color: @bgc_table !important;
+		}
+	}
+
+	.consume-handle-table .ant-table .ant-table-body .ant-table-row-selected:not([data-selected]) {
+		td.ant-table-column-sort,
+		.ant-table-cell-fix-left,
+		.ant-table-cell-fix-right {
+			background-color: @bgc_table !important;
+		}
+	}
+}
+
+.lowerExprateDate {
+	text-align: center;
+
+	p {
+		margin-bottom: 0;
+		font-size: @font-size-20 !important;
+		word-break: break-all;
+	}
+}

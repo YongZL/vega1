@@ -1,0 +1,153 @@
+// @import '~antd/es/style/themes/default.less';
+
+.pagesUserLogin {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	.pagesUserLoginCenter {
+		display: flex;
+		align-items: center;
+		/* 垂直居中 */
+		justify-content: center;
+		width: 55%;
+		min-width: 980px;
+		height: calc(100% - 42px);
+		margin: 0 auto;
+
+		/* 水平居中 */
+		.mainLeft {
+			display: inline-block;
+			width: 48%;
+			margin-right: 10%;
+			text-align: center;
+		}
+
+		.mainRight {
+			display: inline-block;
+			width: 34%;
+			padding: 6% 4%;
+			text-align: center;
+			background: @bgc_table;
+			border-radius: 32px;
+			box-shadow: 4px 16px 32px 0 rgba(59, 95, 136, 0.22);
+
+			img {
+				display: block;
+			}
+
+			.logo {
+				width: 50px;
+				margin: 0 auto;
+			}
+
+			.title {
+				width: 72%;
+				margin: 20px auto 20% auto;
+				color: @btn_special;
+			}
+
+			.form {
+				text-align: left;
+
+				.FormInput {
+					font-size: @font-size-base;
+					border: none;
+					border-bottom: 1px solid @bd_B0B2BC;
+					border-radius: 0;
+					-webkit-box-shadow: 0 0 0 1000px white inset;
+					box-shadow: 0 0 0 1000px white inset;
+				}
+
+				.FormInput > input {
+					-webkit-box-shadow: 0 0 0 1000px white inset;
+					box-shadow: 0 0 0 1000px white inset;
+				}
+
+				.FormInput:focus {
+					border-color: @primary-color;
+				}
+
+				.login-btn {
+					width: 100%;
+					margin-top: 20%;
+					border-radius: 28px;
+				}
+
+				//必填提示
+				.has-error .ant-form-item-explain,
+				.show-help-leave,
+				.show-help-leave-active {
+					font-size: @font-size-12 !important;
+				}
+			}
+		}
+	}
+
+	//   .pagesUserLoginFooterCopyright {
+	//     position: absolute;
+	//     left: 0;
+	//     right: 0;
+	//     bottom: 0px;
+	//   }
+}
+
+.pageFooter {
+	composes: pageFooter from global;
+	color: #fff;
+}
+
+.links {
+	composes: links from global;
+	color: #fff;
+}
+
+/* 1920 以下 */
+@media screen and (max-width: 1919px) {
+	.mainLeft {
+		width: 44% !important;
+	}
+}
+
+/* ipad pro 1366 * 1024 */
+@media screen and (max-width: 1366px) and (min-width: 1025px) {
+	.mainLeft {
+		width: 40% !important;
+	}
+}
+
+/* ipad 768 * 1024 */
+@media screen and (max-width: 1024px) {
+	.mainLeft {
+		width: 40% !important;
+	}
+}
+
+//竖屏
+@media screen and (width: 1024px) and (height: 1366px) {
+	.mainLeft {
+		display: none !important;
+	}
+
+	.mainRight {
+		width: 50% !important;
+		padding: 10% 6% !important;
+	}
+}
+
+@media screen and (width: 768px) and (height: 1024px) {
+	.pagesUserLoginCenter {
+		min-width: 760px !important;
+
+		.mainLeft {
+			display: none !important;
+		}
+
+		.mainRight {
+			width: 50% !important;
+		}
+	}
+}

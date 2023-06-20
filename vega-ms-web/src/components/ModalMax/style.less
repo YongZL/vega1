@@ -1,0 +1,44 @@
+// @import '~antd/es/style/themes/default.less';
+
+.main {
+	:global {
+		.ant-descriptions-row > td {
+			padding-bottom: 8px;
+		}
+		.ant-page-header-heading-extra {
+			flex-direction: column;
+		}
+	}
+}
+
+.headerList {
+	margin-bottom: 4px;
+	:global {
+		.ant-descriptions-row > td {
+			padding-bottom: 8px;
+		}
+	}
+}
+
+.detailWrap {
+	display: flex;
+	width: 100%;
+	.right {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		text-align: right;
+	}
+}
+@media screen and (max-width: @screen-sm) {
+	.stepDescription {
+		left: 8px;
+	}
+	.pageHeader {
+		:global {
+			.ant-pro-page-header-wrap-row {
+				flex-direction: column;
+			}
+		}
+	}
+}

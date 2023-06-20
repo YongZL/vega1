@@ -1,0 +1,37 @@
+.invoiceLabel {
+	display: flex;
+
+	span {
+		display: inline-block;
+	}
+
+	.number,
+	.titleCode {
+		width: 100px;
+	}
+
+	.code {
+		width: 100px;
+		color: @c_body;
+		font-size: @font-size-12;
+		text-align: center;
+	}
+
+	.name {
+		flex: 1;
+		font-size: @font-size-12;
+	}
+
+	.titleCode,
+	.titleName {
+		margin-left: 4px;
+		color: @c_hint;
+		font-size: @font-size-12;
+	}
+
+	i {
+		display: inline-block;
+		margin: 2px 6px;
+		color: @c_disabled;
+	}
+}

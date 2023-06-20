@@ -1,0 +1,26 @@
+.react-resizable {
+	position: relative;
+	background-clip: padding-box;
+	user-select: none;
+}
+
+.react-resizable-handle {
+	top: 50%;
+	width: 10px;
+	height: 60%;
+	cursor: col-resize;
+}
+
+.react-resizable-handle,
+.react-resizable-handle::after {
+	position: absolute;
+	right: -5px;
+	z-index: 1;
+}
+
+.react-resizable-handle::after {
+	left: 4px;
+	width: 2px;
+	height: 100%;
+	content: '';
+}

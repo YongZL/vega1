@@ -1,0 +1,60 @@
+.search_doctor_title {
+	margin-bottom: 20px;
+	color: @c_body;
+	font-size: @font-size-base;
+
+	.specil {
+		color: @c_body;
+	}
+}
+
+.doctor_message {
+	display: flex;
+
+	.doctor_title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 80px;
+
+		& > span {
+			padding: 2px 6px;
+			color: @primary-color;
+			font-size: @font-size-base;
+			background-color: @bgc_checked;
+			border-radius: 4px;
+		}
+	}
+
+	.base_message {
+		display: flex;
+		flex-direction: column-reverse;
+		margin-right: 60px;
+
+		.name {
+			color: @c_body;
+			font-weight: bold;
+			font-size: @font-size-24;
+		}
+
+		.position {
+			color: @c_hint;
+		}
+	}
+
+	.doctor_number {
+		display: flex;
+		flex-direction: column-reverse;
+		color: @c_hint;
+
+		span {
+			color: @c_body;
+		}
+	}
+}
+
+:global {
+	.antd-pro-css-common-pageHeader {
+		padding: 16px 32px;
+	}
+}

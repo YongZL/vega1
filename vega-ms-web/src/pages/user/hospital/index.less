@@ -1,0 +1,61 @@
+.hospitalSwitch {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding-top: 80px;
+
+	.hospitalSwitchContent {
+		width: 1200px;
+		margin: 0 auto;
+
+		.hospitalSwitchTitle {
+			margin-bottom: 20px;
+			font-weight: 400;
+			font-size: @font-size-20;
+			line-height: 22px;
+		}
+
+		.hospitalList {
+			width: 100%;
+			margin-top: 24px;
+			padding: 14px 24px;
+			background-color: @bgc_table;
+			border-radius: 4px;
+
+			.hospitalInfo {
+				display: flex;
+				align-items: center;
+				width: 98%;
+				margin: 10px 0;
+				border: 1px solid @bd_C4C4C4;
+				border-radius: 4px;
+
+				cursor: pointer;
+				transition: all 0.2s;
+
+				&:hover {
+					background-color: @bgc_head;
+				}
+
+				.hospitalLogo {
+					width: 80px;
+					height: 80px;
+
+					img {
+						width: 80%;
+						height: 80%;
+						margin-top: 8px;
+						margin-left: 8px;
+					}
+				}
+
+				.hospitalName {
+					flex: 1;
+					font-weight: 500;
+					font-size: @font-size-16;
+					line-height: 22px;
+				}
+			}
+		}
+	}
+}

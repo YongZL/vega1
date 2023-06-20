@@ -1,0 +1,112 @@
+.menuSelectModal {
+	top: 0 !important;
+	height: 300px;
+	padding: 0;
+	:global {
+		.ant-modal-content {
+			position: relative;
+			height: 100%;
+			border: 1px solid @bd_D9D9D9;
+			border-radius: 0;
+		}
+		.ant-modal-header {
+			height: 40px;
+			padding: 9px 0 9px 8px !important;
+			border-bottom: 1px solid @bd_D9D9D9;
+		}
+		.ant-modal-close {
+			height: 40px;
+			.ant-modal-close-x {
+				svg {
+					width: 16px;
+					height: 16px;
+					color: @c_hint;
+				}
+			}
+		}
+		.ant-modal-title {
+			color: @c_body;
+			font-weight: 500;
+			font-size: @font-size-16;
+			font-family: 'Arial Regular,Noto sans,PingFang SC';
+			line-height: 22px;
+			text-align: left;
+		}
+		.ant-modal-body {
+			height: 220px;
+			padding: 0;
+			// border-bottom: 1px solid @bd_D9D9D9;
+			.ant-tabs-nav {
+				height: 40px;
+				margin: 0;
+				.ant-tabs-nav-list {
+					width: 100%;
+					font-weight: 500;
+					.ant-tabs-tab {
+						display: flex;
+						flex: 1;
+						justify-content: center;
+						margin: 0;
+					}
+				}
+				.ant-tabs-nav-operations {
+					display: none;
+				}
+			}
+			.content {
+				overflow-x: hidden;
+				overflow-y: auto;
+				p {
+					left: 1px;
+					display: flex;
+					align-items: center;
+					box-sizing: border-box;
+					height: 40px;
+					margin: 0;
+					padding-left: 15px;
+					color: @c_body;
+					font-size: @font-size-base;
+					text-align: left;
+					border-radius: 0;
+					cursor: pointer;
+				}
+				p:nth-child(2n-1) {
+					background-color: @bgc_FAFAFA;
+				}
+				.checked {
+					color: #fff;
+					background-color: @primary-color !important;
+					border-radius: 4px;
+				}
+			}
+		}
+		.ant-modal-footer {
+			display: flex;
+			height: 40px;
+			padding: 3px 8px;
+			color: @c_starus_warning;
+			line-height: 32px;
+			border-color: @bd_D9D9D9;
+			.ant-btn {
+				width: 72px;
+				height: 32px;
+				color: @c_body;
+				border: 1px solid @bd_D9D9D9;
+				border-radius: 2px;
+
+				span {
+					font-weight: 400;
+					font-size: @font-size-base;
+					font-family: 'Roboto';
+				}
+			}
+			.ant-btn-primary {
+				min-width: 72px;
+				margin-left: 8px !important;
+				color: #fff;
+				background: @primary-color;
+				border: 0;
+			}
+		}
+	}
+}

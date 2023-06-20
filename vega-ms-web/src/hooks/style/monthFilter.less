@@ -1,0 +1,145 @@
+.flex-between-center {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.month-select {
+	margin-top: 2px;
+	margin-left: 24px;
+
+	.txt {
+		margin-right: 5px;
+		color: @btn_special;
+		font-weight: bold;
+		font-size: @font-size-16;
+		line-height: 24px;
+		cursor: pointer;
+	}
+}
+
+.month-filter,
+.left,
+.mid,
+.right {
+	.flex-between-center;
+}
+
+.month-filter {
+	justify-content: initial;
+
+	.left {
+		width: 145px;
+		margin-right: 38px;
+		color: @btn_special;
+		font-weight: bold;
+		font-size: @font-size-base;
+
+		:global {
+			.ant-select-arrow {
+				right: 13px;
+				margin-top: -8px;
+			}
+			.ant-select-selection__rendered {
+				margin-left: 5px;
+			}
+
+			.ant-select-selection-selected-value {
+				padding-top: 1px;
+				color: @btn_special;
+				font-size: @font-size-16;
+			}
+			.ant-select-focused.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+				box-shadow: none;
+			}
+			.ant-select-selector {
+				background-color: @bgc_table !important;
+				border: none !important;
+				&:focus {
+					border: none;
+					outline: none;
+					box-shadow: none !important;
+				}
+			}
+		}
+
+		.text {
+			margin-right: 5px;
+		}
+
+		.ant-select-open .ant-select-selection {
+			border: none;
+			outline: none;
+			box-shadow: none;
+		}
+
+		.ant-select-selection:focus {
+			border: none;
+			outline: none;
+			box-shadow: none;
+		}
+
+		.ant-select-selection:active {
+			border: none;
+			outline: none;
+			box-shadow: none;
+		}
+	}
+
+	.mid {
+		// width: 900px;
+		justify-content: initial;
+		// width: 77%;
+		padding-top: 8px;
+
+		.month-tag {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-right: 44px;
+			color: @btn_special;
+			font-weight: 400;
+			font-size: @font-size-16;
+			line-height: 24px;
+			cursor: pointer;
+
+			.line {
+				width: 18px;
+				height: 3px;
+				margin-top: 7px;
+				background-color: transparent;
+				border-radius: 2px;
+			}
+		}
+
+		.month-tag--selected {
+			color: @c_2852D7;
+			.text {
+				color: @btn_special;
+				font-weight: 600;
+			}
+
+			.line {
+				background: @btn_special;
+			}
+		}
+
+		.month-tag--disabled {
+			color: @btn_special;
+		}
+
+		.month-tag--delete {
+			display: none;
+			cursor: not-allowed;
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.month-filter .mid .month-tag {
+		margin-right: 20px;
+	}
+	.month-filter .left {
+		margin-right: 35px;
+	}
+}

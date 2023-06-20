@@ -1,0 +1,43 @@
+// @import '~antd/es/style/themes/default.less';
+
+.tagSelect {
+	position: relative;
+	// max-height: 32px;
+	margin-left: -8px;
+	overflow: hidden;
+	line-height: 32px;
+	transition: all 0.1s;
+	user-select: none;
+
+	:global {
+		.ant-tag {
+			margin-right: 24px;
+			font-size: @font-size-base;
+		}
+
+		.ant-tag-checkable-checked {
+			color: @primary-color;
+			background-color: unset;
+			border: 1px solid @primary-color;
+		}
+	}
+
+	&.expanded {
+		max-height: 200px;
+		transition: all 0.1s;
+	}
+
+	.trigger {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		span.anticon {
+			font-size: @font-size-12;
+		}
+	}
+
+	&.hasExpandTag {
+		padding-right: 50px;
+	}
+}

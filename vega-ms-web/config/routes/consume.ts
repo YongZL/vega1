@@ -1,0 +1,55 @@
+export default {
+	// name: 'consume',
+	icon: null,
+	path: '/consume',
+	access: 'consume',
+	routes: [
+		{
+			exact: true,
+			path: '/consume',
+			redirect: '/consume/scan_consume',
+		},
+		{
+			exact: true,
+			// name: 'consume_query',
+			path: '/consume/query',
+			component: './consume/query',
+			access: 'consumeQuery',
+			wrappers: ['@/wrappers/warehouseSelect'],
+		},
+		{
+			exact: true,
+			// name: 'consume_handle',
+			path: '/consume/handle',
+			component: './consume/handle',
+			access: 'consumeEdit',
+			wrappers: ['@/wrappers/warehouseSelect'],
+		},
+		{
+			exact: true,
+			// name: 'scan_consume',
+			path: '/consume/scan_consume',
+			component: './consume/scanCode',
+			access: 'scan_consume',
+			wrappers: ['@/wrappers/warehouseRadioSelect'],
+		},
+		{
+			exact: true,
+			// name: 'medical_advice',
+			path: '/consume/medical_advice',
+			component: './consume/medicalAdvice',
+			access: 'department_medical_advice_list',
+			wrappers: ['@/wrappers/todoList/medicalAdviceSelect'],
+		},
+		{
+			exact: true,
+			// name: 'medical_advice',
+			path: '/consume/medicalAdvice_query',
+			component: './consume/medicalAdvice_query',
+			access: 'department_medical_advice_query',
+		},
+		{
+			component: '404',
+		},
+	],
+};

@@ -1,0 +1,104 @@
+.reportWarp {
+	margin-bottom: 25px;
+
+	.rankWrap {
+		:global {
+			.ant-card-body {
+				padding: 0 10px 24px 10px;
+			}
+
+			.ant-table-small > .ant-table-content > .ant-table-body > table > .ant-table-tbody > tr > td {
+				border: 0;
+			}
+
+			.ant-table-small .ant-table-thead > tr > th {
+				background-color: @bgc_table;
+			}
+		}
+
+		.rankTable {
+			.ant-table-small {
+				font-size: @font-size-12;
+				border: none;
+			}
+		}
+	}
+
+	.growthWrap {
+		margin-bottom: 15px;
+
+		.ant-card-body {
+			padding: 16px 0;
+		}
+
+		.rankTable {
+			tr {
+				white-space: nowrap;
+			}
+
+			.ant-table-small {
+				font-size: @font-size-12;
+				border: none;
+			}
+
+			.ant-table-small > .ant-table-content > .ant-table-body > table > .ant-table-tbody > tr > td {
+				border: 0;
+			}
+
+			.ant-table-content > .ant-table-placeholder {
+				border: none !important;
+			}
+
+			.ant-table-thead > tr > th {
+				background: none !important;
+				border: none;
+			}
+		}
+
+		.average {
+			display: flex;
+			justify-content: space-between;
+			padding: 14px 14px 10px 12px;
+			border-top: 1px solid @bd_C4C4C4;
+			border-bottom: 1px solid @bd_C4C4C4;
+
+			h4 {
+				color: @c_body;
+				font-weight: bold;
+				font-size: @font-size-12;
+			}
+
+			i {
+				font-size: @font-size-20 !important;
+			}
+		}
+	}
+
+	.emptyInfo {
+		padding: 12px 20px;
+	}
+}
+
+/* public ? */
+.ant-card-extra {
+	padding: 12px 0 !important;
+}
+
+.bottomGap {
+	margin-bottom: 25px;
+	// .ant-table-small > .ant-table-content > .ant-table-body > table > .ant-table-tbody > tr > td{
+	//   border: 0;
+	// }
+	// .ant-card-head{
+	//   height:81px;
+	// }
+	// .ant-card-head-wrapper{
+	//   height:80px;
+	// }
+	// .rankTable {
+	//   .ant-table-small {
+	//     border: none;
+	//     font-size: @font-size-12;
+	//   }
+	// }
+}

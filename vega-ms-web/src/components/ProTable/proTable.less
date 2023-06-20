@@ -1,0 +1,256 @@
+.custom-pro-table-container {
+	background-color: @bgc_table;
+
+	// 表格搜索区域样式修改
+	.custom-table-query-box {
+		margin-right: -2px;
+		margin-bottom: 2px;
+		background-color: @bgc_search;
+
+		.ant-form {
+			.ant-form-item {
+				margin-right: 20px;
+				margin-bottom: 8px;
+				overflow: -moz-hidden-unscrollable;
+
+				.ant-form-item-label {
+					display: flex;
+					justify-content: space-between;
+					margin-right: 5px;
+					text-align: center;
+				}
+
+				.ant-remarks__item {
+					margin-bottom: 8px;
+					line-height: 16px;
+				}
+			}
+
+			// 最后一行单独一行
+			> .ant-row {
+				margin-right: -8px !important;
+				margin-left: 0 !important;
+
+				> .ant-col {
+					padding-right: 0 !important;
+					padding-left: 0 !important;
+
+					.justify-label-form-item .ant-form-item-label label {
+						box-sizing: border-box;
+						width: 100%;
+						padding-right: 2px;
+
+						// margin-right:8px;
+						&::after {
+							margin-right: 0;
+						}
+
+						.justify-label-item {
+							display: flex;
+							flex: 1;
+							flex-wrap: nowrap;
+							justify-content: space-between;
+						}
+					}
+
+					// &:not(:last-child) .ant-form-item-control-input {
+					//   max-width: 372px;
+					// }
+				}
+			}
+
+			.ant-form-item-explain-error {
+				white-space: -webkit-nowrap;
+				white-space: nowrap;
+			}
+		}
+
+		&.has-required .ant-form .ant-form-item {
+			.ant-form-item-label > label:not(.ant-form-item-required)::before {
+				margin-right: 4px;
+				visibility: hidden;
+				content: '*';
+			}
+		}
+
+		&:not(.no-search-btn) {
+			.ant-form {
+				// 最后一行单独一行
+				> .ant-row {
+					> .ant-col {
+						&:last-child {
+							position: absolute;
+							right: 6px;
+							bottom: 0;
+							flex: 0 0 100%;
+							width: 100%;
+							max-width: 100%;
+							margin-left: 0;
+
+							.ant-form-item {
+								margin-right: 0;
+							}
+
+							.ant-space-align-center {
+								gap: 6px !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.proTable {
+		.ant-table .ant-table-body .table-odd-row {
+			td.ant-table-column-sort {
+				background-color: @bgc_table;
+			}
+		}
+
+		.ant-table .ant-table-body .table-even-row {
+			background-color: @bgc_FAFAFA;
+
+			.ant-table-cell-fix-left,
+			.ant-table-cell-fix-right,
+			td.ant-table-column-sort {
+				background-color: @bgc_FAFAFA;
+			}
+		}
+	}
+
+	.custom-table-box {
+		border-top: 1px solid @bd_D9D9D9;
+
+		&.no-padding-table > .ant-card .ant-card-body,
+		.ant-pro-card .ant-pro-card-body {
+			padding: 0;
+		}
+
+		.ant-pro-table-list-toolbar-container {
+			padding: 4px 0;
+
+			.ant-pro-table-list-toolbar-left {
+				margin-left: 5px;
+			}
+		}
+
+		.ant-table-thead th.ant-table-column-sort {
+			background-color: @bgc_table;
+		}
+
+		.ant-table .ant-table-body .ant-table-row-selected {
+			td.ant-table-column-sort,
+			.ant-table-cell-fix-left,
+			.ant-table-cell-fix-right {
+				background: @bgc_system;
+			}
+		}
+
+		.ant-table .ant-table-body a span {
+			color: @primary-color;
+		}
+	}
+}
+
+&.no-padding-table > .ant-card .ant-card-body,
+.ant-pro-card .ant-pro-card-body {
+	padding: 0;
+}
+
+.normal-query-card-box {
+	padding: 8px;
+}
+
+.ant-pro-page-container {
+	.ant-tabs-nav {
+		margin-bottom: 0;
+	}
+
+	.ant-tabs-nav-wrap {
+		margin-left: 5px !important;
+		background: @bgc_table;
+
+		.ant-tabs-tab {
+			margin-left: 0 !important;
+			border: none;
+		}
+
+		.ant-tabs-tab-active {
+			background: @bgc_search;
+
+			.ant-tabs-tab-btn {
+				color: @c_body !important;
+			}
+		}
+	}
+}
+
+.render-summary-table {
+	border-bottom: 0 none !important;
+
+	.ant-table .ant-table-body .table-even-row:last-child {
+		.ant-table-cell-fix-left,
+		.ant-table-cell-fix-right,
+		td.ant-table-column-sort {
+			background-color: @bgc_table;
+		}
+	}
+}
+
+// 密度
+.ant-table-thead > tr > th {
+	padding: 9px 8px;
+}
+
+.ant-table.ant-table-middle .ant-table-thead > tr > th {
+	padding: 7px 8px;
+}
+
+.ant-table.ant-table-small .ant-table-thead > tr > th {
+	padding: 5px 8px;
+}
+
+.ant-table-tbody > tr > td {
+	padding: 9px 8px;
+}
+
+.ant-table.ant-table-middle .ant-table-tbody > tr > td {
+	padding: 7px 8px;
+}
+
+.ant-table.ant-table-small .ant-table-tbody > tr > td {
+	padding: 5px 8px;
+}
+
+.ant-table-measure-row > td {
+	padding: 0 !important;
+}
+
+// :global(.ant-card-bordered) {
+//   margin-left: 2px;
+//   margin-top: -5px;
+//   margin-right: 4px;
+// }
+.ant-card-bordered {
+	border: none;
+}
+
+.ant-table-tbody > tr.ant-table-row:hover > td,
+.ant-table-tbody > tr > td.ant-table-cell-row-hover {
+	background: @bgc_head;
+}
+
+.ant-table-thead
+	> tr
+	> th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 1px;
+	height: 1.6em;
+	background-color: @bd_D9D9D9;
+	transform: translateY(-50%);
+	transition: background-color 0.3s;
+	content: '';
+}
